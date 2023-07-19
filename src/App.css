@@ -3,8 +3,14 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin;
   pointer-events: none;
+  margin: 20px;
+}
+
+.App-name {
+  font-size: calc(7px + 2vmin);
+  font-weight: 600;
 }
 
 .App-header {
@@ -13,7 +19,53 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 2px solid white;
+  width: 25vw;
+  height: 20vh;
+  margin: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.card:hover {
+  background-color: gray;
+  transition: 300ms ease-in-out;
+}
+
+.card > p {
+  font-size: calc(2px + 2vmin);
+  margin: 10px 5px;
+}
+
+.card > h6 {
+  margin: 10px 0 2px 0;
+}
+
+.search {
+  display: flex;
+  gap: 5px;
+}
+
+.search input {
+  font-size: calc(2px + 1.5vmin);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
 }
