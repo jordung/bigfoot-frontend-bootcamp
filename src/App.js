@@ -3,6 +3,8 @@ import "./App.css";
 import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Sighting from "./pages/Sighting";
+import AddSighting from "./pages/AddSighting";
+import EditSighting from "./pages/EditSighting";
 
 function App() {
   return (
@@ -10,7 +12,9 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sighting/:id" element={<Sighting />} />
+          <Route path="/sightings/:id" element={<Sighting />} />
+          <Route path="/sightings/:id/edit" element={<EditSighting />} />
+          <Route path="/sightings/add" element={<AddSighting />} />
         </Routes>
       </header>
     </div>

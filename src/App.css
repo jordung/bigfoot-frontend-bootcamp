@@ -34,19 +34,14 @@
 .card {
   border: 2px solid white;
   width: 25vw;
-  height: 20vh;
+  height: 30vh;
   margin: 10px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  transition: 300ms ease-in-out;
-}
-
-.card:hover {
-  background-color: gray;
-  transition: 300ms ease-in-out;
+  font-size: 0.7em;
 }
 
 .card > p {
@@ -105,4 +100,52 @@
 .sighting-back-button:hover {
   background-color: gray;
   transition: 300ms ease-in-out;
+}
+
+.btn {
+  background-color: #e63946;
+  color: white;
+  border: 0px;
+  margin: 0 4px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 50%;
+  transition: all ease-in-out;
+  transition-duration: 300ms;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border-radius: 20px;
+  border: 2px solid white;
+  gap: 2px;
+}
+
+.form input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 50vw;
+}
+
+.form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  width: 50vw;
+  height: 20vh;
 }

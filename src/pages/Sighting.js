@@ -15,7 +15,8 @@ function Sighting() {
         const response = await axios.get(
           `http://localhost:8080/sightings/${id}`
         );
-        setSightingData(response.data[0]);
+        console.log(response);
+        setSightingData(response.data);
       };
       bigfoot();
     }
@@ -33,15 +34,11 @@ function Sighting() {
           >
             Back
           </button>
-          <h4>
-            {sightingData.YEAR || "No Year"} - {sightingData.DATE || "No Date"}
-          </h4>
-          <h5>County: {sightingData.COUNTY || "No County"}</h5>
-          <h5>Report Number: {sightingData.REPORT_NUMBER}</h5>
-          <p className="sighting-label">Environment Details</p>
-          <p className="sighting-detail">{sightingData.ENVIRONMENT || "NIL"}</p>
-          <p className="sighting-label">Observations</p>
-          <p className="sighting-detail">{sightingData.OBSERVED || "NIL"}</p>
+          <h4>{sightingData.date.slice(0, 10) || "No Date"}</h4>
+          <h5>Location: {sightingData.location || "No Location"}</h5>
+          <h5>Report Number: {sightingData.id}</h5>
+          <p className="sighting-label">Notes</p>
+          <p className="sighting-detail">{sightingData.notes || "NIL"}</p>
         </div>
       )}
     </div>
