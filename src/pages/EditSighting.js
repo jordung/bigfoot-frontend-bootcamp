@@ -24,16 +24,6 @@ function EditSighting() {
 
   const editSighting = async (e) => {
     e.preventDefault();
-    // if (date === "") {
-    //   setDate(sightingData.date);
-    // }
-    // if (location === "") {
-    //   setLocation(sightingData.location);
-    // }
-    // if (notes === "") {
-    //   setNotes(sightingData.notes);
-    // }
-
     const response = await axios.put(`http://localhost:8080/sightings/${id}`, {
       date: date.toLocaleString() || sightingData.date.slice(0, 10),
       location: location || sightingData.location,

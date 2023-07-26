@@ -34,6 +34,12 @@ function Sighting() {
           >
             Back
           </button>
+          <button
+            className="btn"
+            onClick={() => navigate(`/sightings/${id}/comments`)}
+          >
+            Comment
+          </button>
           <h4>{sightingData.date.slice(0, 10) || "No Date"}</h4>
           <h5>Location: {sightingData.location || "No Location"}</h5>
           <h5>Report Number: {sightingData.id}</h5>
