@@ -33,8 +33,9 @@
 
 .card {
   border: 2px solid white;
-  width: 25vw;
-  height: 30vh;
+  width: 28vw;
+  min-width: 220px;
+  height: 36vh;
   margin: 10px;
   border-radius: 15px;
   display: flex;
@@ -42,6 +43,7 @@
   justify-content: center;
   cursor: pointer;
   font-size: 0.7em;
+  padding: 0 10px;
 }
 
 .card > p {
@@ -71,6 +73,8 @@
   border-radius: 10px;
   padding: 0 2em;
   text-align: left;
+  width: 80vw;
+  min-width: 280px;
 }
 
 .sighting-label {

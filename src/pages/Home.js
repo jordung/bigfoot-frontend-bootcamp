@@ -14,7 +14,7 @@ function Home() {
 
     if (response) {
       console.log(response);
-      setBigfootSightings(response.data);
+      setBigfootSightings(response.data.sightings);
     } else {
       console.log("No results found");
       setBigfootSightings([]);
@@ -38,14 +38,6 @@ function Home() {
       <img src={logo} className="App-logo" alt="logo" />
       <p className="App-name">Bigfoot Sightings</p>
       <div className="search">
-        {/* <input
-          type="search"
-          name="search"
-          id="search"
-          placeholder="Search by ID"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        /> */}
         <button className="btn" onClick={() => navigate("/sightings/add")}>
           Add Sighting
         </button>
@@ -60,6 +52,9 @@ function Home() {
                   <h6>{sighting.date.slice(0, 10)}</h6>
                   <p>{sighting.location}</p>
                   <p>ID: {sighting.id}</p>
+                  {sighting.categories.length > 0 && (
+                    <p>{sighting.categories[0].name}</p>
+                  )}
                 </div>
                 <div>
                   <button

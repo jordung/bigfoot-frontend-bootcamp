@@ -22,8 +22,6 @@ function Sighting() {
     }
   }, [id]);
 
-  console.log(sightingData);
-
   return (
     <div>
       {sightingData && (
@@ -43,6 +41,9 @@ function Sighting() {
           <h4>{sightingData.date.slice(0, 10) || "No Date"}</h4>
           <h5>Location: {sightingData.location || "No Location"}</h5>
           <h5>Report Number: {sightingData.id}</h5>
+          {sightingData.categories.length > 0 ? (
+            <h5>Category: {sightingData.categories[0].name}</h5>
+          ) : null}
           <p className="sighting-label">Notes</p>
           <p className="sighting-detail">{sightingData.notes || "NIL"}</p>
         </div>
